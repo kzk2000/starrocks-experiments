@@ -1,6 +1,6 @@
 # Starrocks Experiments
 
-Toying with getting Starrocks Redpanda Kafka to work.
+Toying with getting Starrocks & Redpanda Kafka to work.
 
 ### Start SR + Redpanda Kafka 
 ```commandline

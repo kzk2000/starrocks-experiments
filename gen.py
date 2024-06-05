@@ -48,12 +48,13 @@ def gen():
 def main():
     lines = int(sys.argv[1])
     # --advertise-kafka-addr internal://redpanda:29092,external://localhost:9092
-    producer = KafkaProducer(bootstrap_servers='localhost:9092')  # within docker, this is redpanda:29092
+    #producer = KafkaProducer(bootstrap_servers='localhost:9092')  # within docker, this is redpanda:29092
+    producer = KafkaProducer(bootstrap_servers='10.223.1.10:9092')  # within docker, this is redpanda:29092
 
     for x in range(lines):
         data = gen().encode('UTF-8')
         print(data)
-        producer.send('test2', data)
+        #producer.send('test2', data)
         time.sleep(.2)
 
 
